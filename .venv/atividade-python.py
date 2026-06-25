@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QTableWidget, QVBoxLayout, QHBoxLayout, QTableWidgetItem
+from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QTableWidget, QVBoxLayout, QHBoxLayout, QTableWidgetItem, QPushButton
 from PyQt6.QtGui import QPixmap,QIcon
 from PyQt6.QtCore import Qt
 
@@ -46,6 +46,7 @@ class Cadastro(QWidget):
 
         self.layout_vert_col_dir = QVBoxLayout()
 
+
         self.label_titulo = QLabel("CADASTRO DE USUÁRIO")
         self.label_titulo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_titulo.setStyleSheet("""QLabel {color: white; font-size: 40pt; font-weight: bold;}""")
@@ -87,6 +88,17 @@ class Cadastro(QWidget):
 
         
         self.label_col_direita.setLayout(self.layout_vert_col_dir)
+
+
+#==============================BOTÃO CADASTRO==============================================================================
+
+
+        self.botao_cadastro = QPushButton("Cadastrar")
+        self.botao_cadastro.setStyleSheet("""QPushButton{background-color: #D4A43E; color: #ffffff; font-size: 30pt; font-weight: bold; border-radius: 10px;""")
+        self.botao_cadastro.setFixedHeight(88)
+        
+        self.layout_vert_col_dir.addSpacing(20)
+        self.layout_vert_col_dir.addWidget(self.botao_cadastro)
 
 
 # ===============================================FIM COLUNA DIREITA========================================================
